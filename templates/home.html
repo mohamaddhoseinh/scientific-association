@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم انجمن علمی دانشگاه</title>
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+            background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* لایه نیمه شفاف روی پس‌زمینه */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 1;
+            background: rgba(255,255,255,0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            text-align: center;
+            max-width: 900px;
+            width: 100%;
+            backdrop-filter: blur(6px);
+        }
+        
+        .header {
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .description {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+        
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .link-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: block;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #3498db;
+            color: #333;
+        }
+        
+        .link-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .link-card h3 {
+            color: #3498db;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .link-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .footer {
+            padding-top: 1.5rem;
+            border-top: 2px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 سیستم انجمن علمی دانشگاه</h1>
+            <p class="subtitle">سامانه جامع مدیریت انجمن‌های علمی</p>
+        </div>
+        
+        <div class="description">
+            به سیستم مدیریت انجمن علمی خوش آمدید
+        </div>
+        
+        <div class="links">
+            <a href="/admin/" class="link-card">
+                <span class="icon">🔧</span>
+                <h3>پنل مدیریت</h3>
+                <p>مدیریت کاربران، محتوا و تنظیمات سیستم</p>
+            </a>
+            <a href="/swagger/" class="link-card">
+                <span class="icon">📚</span>
+                <h3>مستندات API</h3>
+                <p>راهنمای کامل استفاده از API و تست endpoint ها</p>
+            </a>
+            <a href="/api/news/" class="link-card">
+                <span class="icon">📰</span>
+                <h3>اخبار</h3>
+                <p>انتشار اخبار انجمن علمی</p>
+            </a>
+            <a href="/api/events/" class="link-card">
+                <span class="icon">📅</span>
+                <h3>رویدادها</h3>
+                <p>برگزاری و مدیریت کارگاه‌ها، سمینارها و مسابقات</p>
+            </a>
+            <a href="/api/articles/" class="link-card">
+                <span class="icon">📄</span>
+                <h3>مقالات علمی</h3>
+                <p>ارسال، بررسی و انتشار مقالات علمی</p>
+            </a>
+            <a href="/api/accounts/users/" class="link-card">
+                <span class="icon">👥</span>
+                <h3>حساب کاربری</h3>
+                <p>ثبت‌نام، احراز هویت و مدیریت حساب‌های کاربری</p>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <a href="https://web.telegram.org/" class="link-card">  
+                <p><strong> راه های ارتباطی و درگاه های اطلاع رسانی</strong></p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
